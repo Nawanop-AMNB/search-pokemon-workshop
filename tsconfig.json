@@ -12,8 +12,16 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/interfaces/PokemonAttacks.gql",
+    "src/interfaces/Pokemon.gql",
+    "src/interfaces/PokemonAttacks.gql"
+, "src/interfaces/Pokemon.graphql", "src/operations/PokemonByName.gql"  ],
   "exclude": ["node_modules"]
 }
