@@ -18,10 +18,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(151, 28, 153);
+  background: rgb(79, 14, 96);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(174, 22, 176);
+  background: rgb(79, 14, 96);
 }

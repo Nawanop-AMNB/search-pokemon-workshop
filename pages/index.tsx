@@ -4,15 +4,16 @@ import SearchTextBox from '../src/components/SearchTextBox';
 import Card from '../src/components/Card';
 import Modal from '../src/components/Modal';
 import SearchContent from '../src/components/SearchContent';
+import Container from '../src/components/Container';
 
 const IndexPage = () => {
   const [openSearchModal, setOpenSearchModal] = useState(false);
   return (
-    <>
+    <Container>
       <div
-        className={`grid sm:grid-cols-1 sm:grid-rows-2 sm:grid-flow-row lg:grid-cols-5 lg:grid-rows-1 lg:grid-flow-col h-full w-full`}
+        className={`grid sm:grid-cols-1 sm:grid-rows-2 sm:grid-flow-row lg:grid-cols-2 lg:grid-rows-1 lg:grid-flow-col h-full w-full`}
       >
-        <div className='order-2 lg:order-2 sm:row-span-1 lg:col-span-3 bg-[url(/assets/pokemon-party.jpg)] bg-cover w-full h-screen md:h-screen lg:h-full'>
+        <div className='order-2 lg:order-2 sm:row-span-1 lg:col-span-1 bg-[url(/assets/pokemon-party.jpg)] bg-cover w-full h-screen md:h-[50vh] lg:h-full'>
           <div className='relative backdrop-blur-sm h-full bg-gradient-to-t lg:bg-gradient-to-r from-[#000000ac] to-black h-full'>
             <div className='absolute top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%]'>
               <div className='grid grid-col-4 grid-row-1 grid-flow-col items-center justify-items-center gap-5'>
@@ -32,7 +33,7 @@ const IndexPage = () => {
                     width={150}
                   />
                 </div>
-                <div className='col-span-1 hidden md:block'>
+                <div className='col-span-1'>
                   <RoundImage
                     url='/assets/pokemon-3.png'
                     background='#c38a6487'
@@ -64,7 +65,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div className='order-1 lg:order-2 sm:row-span-1 lg:col-span-2 h-full'>
+        <div className='order-1 lg:order-2 sm:row-span-1 lg:col-span-1 h-full md:h-[50vh] lg:h-full'>
           <div className='grid grid-cols-1 grid-rows-1 grid-flow-col items-center justify-items-center h-full'>
             <Card className='m-6'>
               <h3 className='lg:m-5 text-white text-2xl lg:text-5xl text-center'>
@@ -101,7 +102,7 @@ const IndexPage = () => {
           <SearchContent />
         </Card>
       </Modal>
-    </>
+    </Container>
   );
 };
 

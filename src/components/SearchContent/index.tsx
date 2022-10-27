@@ -39,9 +39,9 @@ function SearchContent(props: SearchContentProps) {
       <div className='mt-6'>
         <p className='text-white text-xl font-semibold pb-2'>Pokemons</p>
         <OverflowBox>
-          <div className='min-w-[300px] md:min-w-[500px] h-[400px] md:h-[600px]'>
+          <div className='min-w-[300px] md:min-w-[500px] h-[350px] md:h-[600px]'>
             {loading &&
-              Array(6)
+              Array(4)
                 .fill(null)
                 .map((_, index) => (
                   <FetchingSkeleton key={`skeleton-loading-${index}`} />
