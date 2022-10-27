@@ -1,19 +1,11 @@
 import React, { PropsWithChildren } from 'react';
 
-export type OverflowBoxProps = {
-  width: number;
-  height: number;
-};
+export type OverflowBoxProps = {};
 
 function OverflowBox(props: PropsWithChildren<OverflowBoxProps>) {
-  const width = props.width;
-  const height = props.height;
   return (
-    <div
-      className='overflow-y-scroll overflow-x-hidden'
-      style={{ width, height }}
-    >
-      <div className='mr-1 mt-[-1rem] w-full h-full'>{props.children}</div>
+    <div className='overflow-y-scroll overflow-x-hidden'>
+      <div className='mr-1 mt-[-1rem] h-full w-full'>{props.children}</div>
     </div>
   );
 }

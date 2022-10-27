@@ -19,7 +19,7 @@ function Modal(props: PropsWithChildren<ModalProps>) {
               e.stopPropagation();
             }}
           >
-            <Card>{props.children}</Card>
+            {props.children}
           </div>
         </div>
       </div>

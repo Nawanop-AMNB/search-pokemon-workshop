@@ -25,7 +25,7 @@ function SearchContent(props: SearchContentProps) {
     }) || [];
 
   return (
-    <div className='w-[400px]'>
+    <div className='w-full'>
       <SearchTextBox
         value={text}
         placeHolder={`A Pokemon's Name`}
@@ -38,21 +38,23 @@ function SearchContent(props: SearchContentProps) {
       />
       <div className='mt-6'>
         <p className='text-white text-xl font-semibold pb-2'>Pokemons</p>
-        <OverflowBox width={400} height={600}>
-          {loading &&
-            Array(6)
-              .fill(null)
-              .map((_, index) => (
-                <FetchingSkeleton key={`skeleton-loading-${index}`} />
-              ))}
-          {error && <FetchingFailedView />}
-          {filteredData.length > 0 && (
-            <div>
-              {filteredData.map((pokemon) => {
-                return <PokemonItem data={pokemon} onClick={onClick} />;
-              })}
-            </div>
-          )}
+        <OverflowBox>
+          <div className='min-w-[300px] md:min-w-[500px] h-[400px] md:h-[600px]'>
+            {loading &&
+              Array(6)
+                .fill(null)
+                .map((_, index) => (
+                  <FetchingSkeleton key={`skeleton-loading-${index}`} />
+                ))}
+            {error && <FetchingFailedView />}
+            {filteredData.length > 0 && (
+              <div>
+                {filteredData.map((pokemon) => {
+                  return <PokemonItem data={pokemon} onClick={onClick} />;
+                })}
+              </div>
+            )}
+          </div>
         </OverflowBox>
       </div>
     </div>

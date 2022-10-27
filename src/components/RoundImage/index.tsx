@@ -1,9 +1,8 @@
-
 export type RoundImageProps = {
   url: string;
   background: string;
-  width: number;
-  height: number;
+  width: number | string;
+  height: number | string;
 };
 
 function RoundImage(props: RoundImageProps) {
