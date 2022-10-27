@@ -37,6 +37,8 @@ function PokemonByIdPage({
               value={pokemon.classification}
             />
             <LabelValue label={'Max HP: '} value={pokemon.maxHP.toString()} />
+            <LabelValue label={'Max CP: '} value={pokemon.maxCP.toString()} />
+            <LabelValue label={'Flee Rate: '} value={`${pokemon.fleeRate * 100}%`} />
             <LabelValue
               label={'Height: '}
               value={`${pokemon.height.minimum} - ${pokemon.height.maximum}`}
